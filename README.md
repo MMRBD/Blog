@@ -1,2 +1,2 @@
 # Blog
-This the learning and pratice project of Django.
+This the learning and practice project of Django.
