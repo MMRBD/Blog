@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>Accounts</title>
+
+    <style>
+        button {
+            text-decoration: none;
+            margin: 0 0px;
+        }
+
+        .hot_container {
+            margin-top: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button.btn {
+            display: inline-block;
+            color: #666;
+            background-color: #eee;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            padding: 10px 30px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-bottom-width: 3px;
+        }
+
+        button.btn:hover {
+            background-color: #e3e3e3;
+            border-color: rgba(0, 0, 0, 0.5);
+        }
+
+        button.btn:active {
+            background-color: #CCC;
+            border-color: rgba(0, 0, 0, 0.9);
+
+        }
+
+        button.btn.btn_blue {
+            background-color: #699DB6;
+            border-color: rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            color: #FFF;
+        }
+
+        button.btn.btn_blue:hover {
+            background-color: #4F87A2;
+            border-color: rgba(0, 0, 0, 0.5);
+        }
+
+        button.btn.btn_blue:active {
+            background-color: #3C677B;
+            border-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /*div View*/
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            width: 400px;
+            height: 380px;
+            overflow: auto;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            border-radius: 10px;
+            background: #fff;
+            /*padding: 20px;*/
+
+            display: flex;
+            align-items: center;
+            justify-content: center
+
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            /*padding: 2px 16px;*/
+            background-color: grey;
+        }
+
+        .center_div {
+            vertical-align: baseline;
+            min-width: 360px;
+        }
+    </style>
+</head>
+<body style="background: none">
+<div class="container" style="background: none">
+    <div class="card card-container" id="card" style="">
+        <div class="center_div">
+            <center><h2 class='login_title text-center' style="height: 30px;">
+                <span
+                        style="color: black; font-size: 18px; font-weight: bold">USER LOGIN</span>
+
+            </h2></center>
+
+            <form class="form-signin" action="Login" method="post">
+
+                <p class="input_title">Email</p>
+                <label for="inputEmail"></label><input type="text" id="inputEmail" class="login_box" name="email" required autofocus>
+                <p class="input_title">Password</p>
+                <label for="inputPassword"></label><input type="password" id="inputPassword" class="login_box" name="password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                    </label>
+                </div>
+                <div class="hot_container">
+                    <p>
+                        <button class="btn btn_blue" type="submit">Login</button>
+                    </p>
+                </div>
+            </form><!-- /form -->
+
+        </div><!-- /card-container -->
+    </div><!-- /card-container -->
+
+</div>
+</body>
+</html>
