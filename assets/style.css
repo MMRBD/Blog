@@ -1,0 +1,17 @@
+body{
+    /*background-image: url("/static/bg.png");*/
+    background-repeat-repeat-y:no-repeat;
+    background-color: #666666;
+    color: #FFFFFF;
+}
+body*{
+    font-family: Ubuntu, sans-serif;
+}
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+    margin: 0;
+}
+a,a:hover, a:visited{
+    color: #FFFFFF;
+    text-decoration: none;
+}
