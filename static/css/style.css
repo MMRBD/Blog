@@ -1,0 +1,17 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: darkgray;
+
+}

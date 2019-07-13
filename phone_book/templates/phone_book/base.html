@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Phone Book</title>
+    {% load staticfiles %}
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/ css"/>
+
+    <!-- Bootstrap core CSS-->
+    <link href="{% static "css/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static "fontawesome/css/all.min.css" %}" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="{% static "javascript/lib/datatables/dataTables.bootstrap4.css" %}" rel="stylesheet">
+    <link href="{% static "images/m.jpg" %}" rel="icon">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="{% url 'p_home' %}">Smart Phone Book</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'add_contact' %}">Add Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    {% if messeges %}
+        {% for message in messeges %}
+            {{ message }}
+        {% endfor %}
+
+    {% else %}
+        {#        <h3>Not found</h3>#}
+    {% endif %}
+
+    {% block main_content %}
+
+    {% endblock %}
+</div>
+<br>
+<br>
+<footer class="sticky-footer">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright © MD. Moklesur Rahman </span>
+        </div>
+    </div>
+</footer>
+<br>
+<br>
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static "javascript/lib/jquery/jquery.min.js" %}"></script>
+<script src="{% static "css/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static "javascript/lib/jquery-easing/jquery.easing.min.js" %}"></script>
+
+<!-- Page level plugin JavaScript-->
+<script src="{% static "javascript/lib/chart.js/Chart.min.js" %}"></script>
+<script src="{% static "javascript/lib/datatables/jquery.dataTables.js" %}"></script>
+<script src="{% static "javascript/lib/datatables/dataTables.bootstrap4.js" %}"></script>
+
+</body>
+</html>

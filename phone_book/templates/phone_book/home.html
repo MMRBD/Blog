@@ -1,0 +1,28 @@
+{% extends 'phone_book/base.html' %}
+
+{% block main_content %}
+    <h1 class="text-center">Smart Phone Book</h1>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            {% if all_contact %}
+                {% for contact in all_contact %}
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5>{{ contact.name }}</h5>
+                                <p class="card-text">{{ contact.email | linebreaks }} {{ contact.mobile | linebreaks }} {{ contact.phone | linebreaks }} {{ contact.city | linebreaks }} {{ contact.address | linebreaks }} {{ contact.country }}</p>
+                                <a class="btn btn-info float-lg-right" href=" {% url 'edit' contact.id %}">
+                                    <i class="fas fa-fw fa-edit"></i>
+                                    <span>Edit</span>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
